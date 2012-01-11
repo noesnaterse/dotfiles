@@ -22,3 +22,8 @@ if has("autocmd")
   augroup END
 endif
 syntax on
+
+" Invisible characters
+set listchars=trail:·,tab:‣‒,eol:¬,extends:«,precedes:»
+set nolist
+noremap <leader>i :set list!<CR> " Toggle invisible chars"
