@@ -3,6 +3,9 @@ call pathogen#infect()
 syntax on
 filetype plugin indent on
 
+" Can I haz Col0rz plz
+set t_Co=256
+
 " Set leader to comma
 let mapleader = ","
 
