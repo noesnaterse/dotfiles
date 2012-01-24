@@ -1,3 +1,8 @@
+call pathogen#infect()
+
+syntax on
+filetype plugin indent on
+
 " Set leader to comma
 let mapleader = ","
 
@@ -7,8 +12,6 @@ set encoding=utf-8
 set expandtab
 set tabstop=2
 set shiftwidth=2
-set autoindent
-set smartindent
 
 if has("autocmd")
   " Drupal *.module and *.install files.
@@ -21,9 +24,10 @@ if has("autocmd")
     autocmd BufRead,BufNewFile *.view set filetype=php
   augroup END
 endif
-syntax on
 
 " Invisible characters
 set listchars=trail:·,tab:‣‒,eol:¬,extends:«,precedes:»
 set nolist
 noremap <leader>i :set list!<CR> " Toggle invisible chars"
+
+set mouse=a
