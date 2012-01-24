@@ -5,6 +5,7 @@ filetype plugin indent on
 
 " Can I haz Col0rz plz
 set t_Co=256
+colorscheme peachpuff
 
 " Set leader to comma
 let mapleader = ","
@@ -34,3 +35,4 @@ set nolist
 noremap <leader>i :set list!<CR> " Toggle invisible chars"
 
 set mouse=a
+set number
