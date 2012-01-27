@@ -36,3 +36,7 @@ noremap <leader>i :set list!<CR> " Toggle invisible chars"
 
 set mouse=a
 set number
+
+let g:snippets_dir="~/.vim/templates/"
+let g:snips_author="Noë Snaterse"
+
