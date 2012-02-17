@@ -5,7 +5,7 @@ filetype plugin indent on
 
 " Can I haz Col0rz plz
 set t_Co=256
-colorscheme peachpuff
+colorscheme molokai
 
 " Set leader to comma
 let mapleader = ","
