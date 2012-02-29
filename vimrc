@@ -40,3 +40,4 @@ set number
 let g:snippets_dir="~/.vim/templates/"
 let g:snips_author="Noë Snaterse"
 
+cmap w!! %sudo tee > /dev/null %
