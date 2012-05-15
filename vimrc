@@ -1,4 +1,5 @@
 call pathogen#infect()
+call pathogen#helptags()
 
 syntax on
 filetype plugin indent on
@@ -40,4 +41,5 @@ set number
 let g:snippets_dir="~/.vim/templates/"
 let g:snips_author="Noë Snaterse"
 
+let g:syntastic_phpcs_conf="--standard=Hotelsnl --tab-width=2"
 cmap w!! %sudo tee > /dev/null %
