@@ -22,6 +22,7 @@ set shiftwidth=2
 if has("autocmd")
   " Drupal *.module and *.install files.
   augroup module
+    autocmd!
     autocmd BufRead,BufNewFile *.module set filetype=php
     autocmd BufRead,BufNewFile *.install set filetype=php
     autocmd BufRead,BufNewFile *.test set filetype=php
@@ -44,4 +45,16 @@ let g:syntastic_auto_loc_list=1
 let g:syntastic_phpcs_conf="--standard=Hotelsnl --tab-width=2"
 
 "pear install dot.php.net/pman
-set keywordprg=pman
+augroup PHP
+  autocmd!
+  autocmd FileType php setlocal keywordprg=pman
+augroup END
+
+" Remove whitespace from code files on save
+function! StripTrailingWhite()
+  let l:winview = winsaveview()
+  silent! %s/\s\+$//
+  call winrestview(l:winview)
+endfunction
+autocmd BufWritePre *.{php,py,pl,js,css,html} call StripTrailingWhite()
+
