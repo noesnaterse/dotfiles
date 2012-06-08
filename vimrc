@@ -1,5 +1,6 @@
 call pathogen#infect()
 call pathogen#helptags()
+call pathogen#runtime_append_all_bundles()
 
 syntax on
 filetype plugin indent on
@@ -38,8 +39,9 @@ noremap <leader>i :set list!<CR> " Toggle invisible chars"
 set mouse=a
 set number
 
-let g:snippets_dir="~/.vim/templates/"
-let g:snips_author="Noë Snaterse"
-
+let g:syntastic_check_on_open=1
+let g:syntastic_auto_loc_list=1
 let g:syntastic_phpcs_conf="--standard=Hotelsnl --tab-width=2"
-cmap w!! %sudo tee > /dev/null %
+
+"pear install dot.php.net/pman
+set keywordprg=pman
