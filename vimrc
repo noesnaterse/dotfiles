@@ -62,3 +62,6 @@ set cursorline
 set cursorcolumn
 "set colorcolumn=80
 match ErrorMsg /\%>80v.\+/
+
+"spell check everything I type
+set spell
