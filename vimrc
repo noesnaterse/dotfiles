@@ -58,3 +58,7 @@ function! StripTrailingWhite()
 endfunction
 autocmd BufWritePre *.{php,py,pl,js,css,html} call StripTrailingWhite()
 
+set cursorline
+set cursorcolumn
+"set colorcolumn=80
+match ErrorMsg /\%>80v.\+/
