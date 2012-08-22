@@ -44,7 +44,7 @@ let g:syntastic_check_on_open=1
 let g:syntastic_auto_loc_list=1
 let g:syntastic_phpcs_conf="--standard=Hotelsnl --tab-width=2"
 
-"pear install dot.php.net/pman
+"pear install doc.php.net/pman
 augroup PHP
   autocmd!
   autocmd FileType php setlocal keywordprg=pman
