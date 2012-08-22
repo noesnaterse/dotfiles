@@ -5,7 +5,7 @@ call pathogen#runtime_append_all_bundles()
 syntax on
 filetype plugin indent on
 
-" Can I haz Col0rz plz
+" Can I have some colors?
 set t_Co=256
 colorscheme molokai
 
@@ -60,8 +60,19 @@ autocmd BufWritePre *.{php,py,pl,js,css,html} call StripTrailingWhite()
 
 set cursorline
 set cursorcolumn
-"set colorcolumn=80
-match ErrorMsg /\%>80v.\+/
+if($VERSION >= 730)
+  set colorcolumn=80
+else
+  match ErrorMsg /\%>80v.\+/
+endif
 
 "spell check everything I type
 set spell
+
+" Easy help file navigation
+nmap <buffer> <CR> <C-]>
+nmap <buffer> <BS> <C-T>
+
+" incremental search
+set incsearch
+
