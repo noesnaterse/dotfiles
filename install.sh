@@ -17,3 +17,4 @@ ln -s $destination/vim ~/.vim
 ln -s $destination/profile ~/.profile
 ln -s $destination/bashrc ~/.bashrc
 
+git submodule update --init --recursive
