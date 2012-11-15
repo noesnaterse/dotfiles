@@ -1,6 +1,6 @@
 #!/bin/bash
 
-destination="~/git/dotfiles/";
+destination="~/git/dotfiles";
 
 if [ "$1" ]
   then
