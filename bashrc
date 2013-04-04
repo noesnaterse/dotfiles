@@ -102,4 +102,4 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-alias '104116116112058047047119119119046107112110122097107101108105106107103108097115046110108047'='firefox http://www.hotels.nl'
+alias tmux="TERM=screen-256color-bce tmux"
