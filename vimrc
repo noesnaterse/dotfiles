@@ -61,11 +61,7 @@ autocmd BufWritePre *.{php,py,pl,js,css,html} call StripTrailingWhite()
 
 set cursorline
 set cursorcolumn
-if($VERSION >= 730)
-  set colorcolumn=80
-else
-  match ErrorMsg /\%>80v.\+/
-endif
+set colorcolumn=80
 
 "spell check everything I type
 set spell
