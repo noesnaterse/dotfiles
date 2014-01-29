@@ -114,4 +114,21 @@ YELLOW="\[\033[0;33m\]"
 GREEN="\[\033[0;32m\]"
 NOCLR="\[\033[0m\]"
 
+function parse_git_branch {
+   GREEN2="\033[0;32m"
+   YELLOW2="\033[0;33m"
+   RED2="\033[0;31m"
+   NOCLR2="\033[0m"
+   BRANCH=$(git symbolic-ref HEAD 2> /dev/null) || return
+   BRANCH=${BRANCH#refs/heads/}
+   if git diff --quiet 2>/dev/null >&2
+   then
+     DIRTY="$GREEN2\xE2\x9C\x93"
+   else
+     DIRTY="$RED2\xE2\x9D\x8C"
+   fi
+
+   GITPROMPT=" $NOCLR2$YELLOW2[$BRANCH $DIRTY$YELLOW2]$NOCLR2"
+   echo -e $GITPROMPT
+}
 PS1="${debian_chroot:+($debian_chroot)}\u@\h:\w $GREEN\$(parse_git_branch)$NOCLR\$ "
