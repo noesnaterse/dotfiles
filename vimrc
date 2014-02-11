@@ -64,7 +64,7 @@ set cursorcolumn
 set colorcolumn=80
 
 "spell check everything I type
-set spell
+"set spell
 
 " Easy help file navigation
 nmap <buffer> <CR> <C-]>
