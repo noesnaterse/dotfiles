@@ -5,7 +5,8 @@ destination=$HOME"/git/dotfiles";
 if [ "$1" ]
   then
   destination=$1;
-  fi
+fi
+cd $destination
 
 rm ~/.vimrc
 rm -rf ~/.vim
