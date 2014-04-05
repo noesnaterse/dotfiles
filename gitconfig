@@ -1,5 +1,8 @@
 [user]
 	email = noe@wiredpea.com
-	name = Noe Snaterse
+	name = Noë Snaterse
 [color]
   ui = auto
+[core]
+	autocrlf = input
+	safecrlf = true
