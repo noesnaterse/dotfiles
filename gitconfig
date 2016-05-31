@@ -6,6 +6,8 @@
 [core]
 	autocrlf = input
 	safecrlf = true
+	excludesfile = /Users/noe/.gitignore
+	editor = /usr/bin/vim
 [alias]
   hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
   type = cat-file -t
