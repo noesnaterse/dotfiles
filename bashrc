@@ -85,6 +85,9 @@ alias l='ls -CF'
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
+
+alias phpdoc='docker run --rm -v $(pwd):/data phpdoc/phpdoc:3 project:run -d . -t docs/'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
@@ -132,3 +135,5 @@ function parse_git_branch {
    echo -e $GITPROMPT
 }
 PS1="${debian_chroot:+($debian_chroot)}\u@\h:\w $GREEN\$(parse_git_branch)$NOCLR\$ "
+
+export PATH="$HOME/.symfony/bin:$PATH"
